@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+  
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+   Mini Code Editor
+  </title>
+
+  <!-- CSS Linkiing -->
+  <link rel="stylesheet" href="editor.main.css">
+
+ </head>
+
+ <body>
+
+ <div id="container">
+ 
+   <div class="editor">
+   
+     <div class="tabs">
+	 
+	   <!-- Language Selecting -->
+       <div class="tab active" data-lang="html">HTML</div>
+       <div class="tab" data-lang="css">CSS</div>
+       <div class="tab" data-lang="js">JS</div>
+       <div class="tab" data-lang="py">Python</div>
+       <div class="tab" data-lang="c">C</div>
+       <div class="tab" data-lang="cpp">C++</div>
+	   
+     </div>
+	 
+     <div id="editorShell">
+	 
+       <div id="editorGutter"></div>
+       <div id="editorBody">
+	   
+         <pre id="editorHighlight"></pre>
+         <pre id="editorFoldOverlay"></pre>
+		 
+         <textarea id="code"></textarea>
+		 
+       </div>
+	   
+     </div>
+	 
+   </div>
+   
+   <div id="preview">
+   
+     <iframe id="output"></iframe>
+	 
+   </div>
+   
+ </div>
+ 
+ <div id="statusBar">
+ 
+   <div id="statusLeft"></div>
+   <div id="statusRight"></div>
+   
+ </div>
+
+ <!-- The 1 single loader so it won't take many <script> tags -->
+ <script src="loader.js"></script>
+
+ </body>
+
+</html>
